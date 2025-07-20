@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <!-- Ionicons Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/ionicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="https://icons.iconarchive.com/icons/iconarchive/wild-camping/512/Flower-icon.png">
+    <style>
+        :root {
+            --boxbgcolor: rgba(196, 196, 196, 0.35);
+        }
+
+        /* Full height of the viewport */
+        html,
+        body {
+            background: linear-gradient(180deg, rgb(63, 99, 228) 0%, rgba(231, 107, 219, 0.79) 93.75%);
+            background-repeat: no-repeat;
+            /* Prevent the gradient from repeating */
+            background-size: cover;
+            /* Ensure it covers the entire viewport */
+            background-attachment: fixed;
+            /* Optional: makes the background stay in place on scroll */         
+
+        }
+
+        .full-height {
+            min-height: 100vh;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+        }
+
+        .txt-white {
+            color: white;
+            background-color: #545454;
+            border-radius: 8px;
+            padding: 10px 15px;
+            /* Adjust for better button size */
+            color: white;
+            /* Text color for contrast */
+            text-align: center;
+            display: inline-block;
+            /* Makes it take only the space it needs */
+            cursor: pointer;
+            /* Adds a pointer cursor on hover */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            /* Optional: Adds a button-like shadow */
+            transition: background-color 0.3s ease;
+            /* Adds smooth hover effect */
+        }
+
+        .txt-white:hover {
+            background-color: #00ff6a;
+            color: black;
+            /* Slightly lighter shade for hover effect */
+
+        }
+
+        .txt-small {
+            font-size: smaller;
+        }
+
+        .txt-big {
+            font-size: larger;
+        }
+
+        .bg-black {
+            background: rgba(84, 84, 84, 1);
+        }
+
+        .border-r {
+            border-radius: 5px;
+        }
+
+        .tr-bg {
+            /* background: linear-gradient(180deg,  #D8B4FE  0%, #A78BFA 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            Optional: makes the background stay in place on scroll */
+            background-color: rgba(83, 71, 71, 0.226);
+        }
+
+        .txt-bs {
+            font-family: Calibri;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+
+        .txt-smaller {
+            font-size: smaller;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info div {
+            margin-bottom: 10px;
+        }
+
+        .contact-info ion-icon {
+            margin-right: 8px;
+        }
+
+        .gry-bx {
+            background-color: #88888881;
+            border-radius: 10px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 10px;
+        }
+
+        .gry-bx:hover{
+            transition: 1s;
+            background-color: #e4b5e0;
+            border-radius: 10px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            color: black;
+        }
+
+
+        div .txt-gry {
+            color: rgb(133, 121, 121) !important;
+        }
+
+
+        .txt-figma {
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 18px;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+        }
+
+        .mt {
+            margin-top: 10px;
+        }
+
+        .fa-solid.fa-circle {
+            font-size: 9px;
+            margin-left: 4px;
+        }
+
+        .H-img {
+            height: 50px;
+            margin-top: 10px;
+        }
+
+
+        * {
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+
+ 
+        .bxc img{
+            height: 80px;
+        }
+        .myme{
+            
+  border-radius: 20px;
+            
+        }
+        .myma{     
+            border-radius: 20px;
+
+            margin-right: 10px;
+        }
+
+        .jhgf{
+            background: linear-gradient(180deg, #ffddee 0%, #e492bb 50%, #f1869f 100%);
+
+        }
+
+        @media only screen and (max-width: 1022px) {
+    .myma, .myme {
+        display: block;
+        width: 100%;
+        margin-right: 0; /* Remove margin to avoid spacing issues */
+        margin-bottom: 20px; /* Add spacing between the stacked columns */
+    }
+
+    .tr-bg {
+        display: block;
+    }
+}
+
+@media only screen and (max-width:358px ) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container full-height">
+        <div class="row">
+            <!-- Profile Section -->
+            <div class="col-md-5 col-sm-12  text-white p-4 tr-bg myma">
+                <div class="d-flex align-items-center mb-4">
+                    <!-- Profile Image -->
+                    <div class="me-3">
+                        <img src="profile-pic.jpg" alt="Profile Picture" height="130px " width="auto" class="profile-img">
+                    </div>
+                    <!-- Profile Details -->
+                    <div>
+                        <h1>Classy Clera</h1>
+                        <p>Web Developer | Designer</p>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="col col-md-12 gry-bx "><ion-icon name="at-outline"></ion-icon> himail123@gmail.com</div>
+                    <div class="col col-md-12 gry-bx"><ion-icon name="call-outline"></ion-icon> 9216-821*****</div>
+                    <div class="col col-md-12 gry-bx"><ion-icon name="earth-outline"></ion-icon> https://www.xyz.com
+                    </div>
+                    <div class="col col-md-12 gry-bx"><ion-icon name="location-outline"></ion-icon> New York, USA</div>
+                </div>
+
+                <div class="knowledge">
+                    <div class="col col-md-12 gry-bx">
+                        <h3>Industry</h3>
+                        <ul>
+                            <li>User Interface</li>
+                            <li>User Experience </li>
+                            <li>Product Design </li>
+                            <li>Interaction Design</li>
+                            <li>Design Research</li>
+                            <li>Web Design</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="col col-md-12 gry-bx mt">
+                    <h3>Languages</h3>
+                    <ul>
+                        <span> Urdu <i class="fa-solid fa-circle g"></i><i class="fa-solid fa-circle"></i><i
+                                class="fa-solid fa-circle g"></i><i class="fa-solid fa-circle"></i></span> <br>
+                        <span> French<i class="fa-solid fa-circle g"></i><i class="fa-solid fa-circle"></i><i
+                                class="fa-solid fa-circle"></i></span> <br>
+                        <span> English <i class="fa-solid fa-circle g"></i><i class="fa-solid fa-circle"></i></span>
+                        <br>
+                    </ul>
+                </div>
+                <div class="col col-md-12 gry-bx mt">
+                    <h3>Social</h3>
+                    <ul>
+                        <span>MySiteName.com</span> <br>
+                        <span>linkedin.com/in/Amna</span> <br>
+                        <span>dribbble.com/Amna</span> <br>
+                        <span>behance.com/Amna</span> <br>
+                    </ul>
+                </div>
+                <div class="bxc">
+                <div class="col col-md-12 gry-bx mt">
+                        <h3>Hobbies</h3>
+                    </div>
+
+                    <div class="img-haver">
+                        <img src="Dancing (2).png" alt="" class="H-img">
+                        <img src="Football (1).png" alt="" class="H-img">
+                        <img src="Reading (1).png" alt="" class="H-img">
+                        <img src="Singing.png" alt="" class="H-img">
+                    </div></div>
+            </div>
+
+            <!-- Additional Content -->
+            <div class="col-md-5 col-sm-12 p-4 jhgf myme">
+                <h6 class="bg-black border-r p-2 txt-white ">Experience</h6>
+                <h6>Blue Moon Consultency Studio</h6>
+                <span class="txt-bs">Seniour UI designer</span><br>
+                <span class="txt-smaller txt-gry">Aug 2020 - Present - 1 year, New York</span>
+                <p class="txt-smaller">Product team to prototype, design and deliver the UI and UX experience with a
+                    lean design process: research, design, test, and iterate.</p>
+                <h6>Blue Moon Consultency Studio</h6>
+                <span class="txt-bs">Seniour UI designer</span><br>
+                <span class="txt-smaller txt-gry">Aug 2020 - Present - 1 year, New York</span>
+                <p class="txt-smaller">Product team to prototype, design and deliver the UI and UX experience with a
+                    lean design process: research, design, test, and iterate.</p>
+                <h6 class="bg-black border-r p-2 txt-white">education</h6>
+                <h6>Black Yark product design</h6>
+                <span class="txt-bs">SCAT Education Campus</span><br>
+                <span class="txt-smaller txt-gry">2011-2015, New York</span>
+                <h6>Njit higher</h6>
+                <span class="txt-bs">e.g Experience campus</span><br>
+                <span class="txt-smaller txt-gry">2011-2015, New York</span> <br>
+                <h6 class="bg-black border-r p-2 txt-white">My Skills</h6>
+                <div class="row">
+                    <div class="col col-md-3">
+                        <img src="figma.png" alt="" class="image-fluid">
+                        <p class="txt-figma">Figma</p>
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="figma.png" alt="" class="image-fluid">
+                        <p class="txt-figma">Photoshop</p>
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="figma.png" alt="" class="image-fluid">
+                        <p class="txt-figma">Adobe XD</p>
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="figma.png" alt="" class="image-fluid">
+                        <p class="txt-figma">Illustrator</p>
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="figma.png" alt="" class="image-fluid">
+                        <p class="txt-figma">InDesign</p>
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="figma.png" alt="" class="image-fluid">
+                        <p class="txt-figma">After Effects</p>
+                    </div>
+                </div>
+                <h6 class="bg-black border-r p-2 txt-white">Other Skills</h6>
+
+                <div class="row">
+                    <div class="col col-md-3">
+                        <img src="figma.png" alt="" class="image-fluid">
+                        <p class="txt-figma">Illustrator</p>
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="figma.png" alt="" class="image-fluid">
+                        <p class="txt-figma">InDesign</p>
+                    </div>
+                    <div class="col col-md-3">
+                        <img src="figma.png" alt="" class="image-fluid">
+                        <p class="txt-figma">After Effects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

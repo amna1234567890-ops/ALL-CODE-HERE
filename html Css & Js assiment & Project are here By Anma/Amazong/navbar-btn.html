@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scroll Bar with Fixed Height Images</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    <style>
+        /* Background Styling */
+        .container-fluid {
+            background-image: url(https://m.media-amazon.com/images/I/71VcGrxQRBL._SX3000_.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .myPadding {
+            padding: 20px;
+        }
+
+        .card {
+            border-radius: 0px !important;
+        }
+
+        /* General Navbar Styling */
+        .navbar {
+            background-color: #212529;
+        }
+
+        .navbar-brand-img img {
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .delivery-btn {
+            background: transparent;
+            color: white;
+            border: none;
+            font-size: 14px;
+            font-weight: lighter;
+        }
+
+        .delivery-btn:hover {
+            border: 1px solid white;
+        }
+
+        .bold-text {
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+        }
+
+        ::selection {
+            background-color: #9900ffb4;
+            color: white;
+        }
+
+        /* Scrollable Container Styling */
+        .scroll-container {
+            display: flex;
+            overflow-x: auto; /* Enables horizontal scrolling */
+            gap: 15px; /* Space between images */
+            padding: 20px;
+            white-space: nowrap; /* Prevents wrapping */
+        }
+
+        .scroll-container img {
+            height: 200px; /* Fixed height for all images */
+            width: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Rounded corners */
+            object-fit: cover; /* Ensures images fit nicely */
+            flex-shrink: 0; /* Prevent shrinking */
+        }
+
+        /* Custom Scrollbar Styling (Optional) */
+        .scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 4px;
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+        .noncard{
+                display: none;
+                
+            }
+            .myfluid{
+                display: block;
+            }
+
+        @media only screen and (max-width:790px){
+            .noncard{
+                display: block;
+                
+            }
+            .myfluid{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid noncard">
+        <div class="container mt-5 overflow-auto" style="white-space: nowrap;">
+          <div class="d-inline-flex">
+            <div class="card myPadding mb-3" style="min-width: 18rem;">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_1x_EN._SY304_CB564799420_.jpg"
+                class="card-img-top" alt="..." height="240px">
+              <div class="card-body">
+                <h5 class="card-title">Computer and Accessories</h5>
+              </div>
+            </div>
+            <div class="card myPadding mb-3" style="min-width: 18rem;">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Headset_1x._SY116_CB667159060_.jpg"
+                class="card-img-top" alt="..." height="240px">
+              <div class="card-body">
+                <h5 class="card-title">Computer and Accessories</h5>
+              </div>
+            </div>
+            <div class="card myPadding mb-3" style="min-width: 18rem;">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_BOTTOMS_1x._SY116_CB624172947_.jpg"
+                class="card-img-top" alt="..." height="240px">
+              <div class="card-body">
+                <h5 class="card-title">Computer and Accessories</h5>
+              </div>
+            </div>
+            <div class="card myPadding mb-3" style="min-width: 18rem;">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/CleaningTool_1x._SY116_CB563137408_.jpg"
+                class="card-img-top" alt="..." height="240px">
+              <div class="card-body">
+                <h5 class="card-title">Computer and Accessories</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="container mt-3 overflow-auto" style="white-space: nowrap;">
+          <div class="d-inline-flex">
+            <div class="card myPadding mb-3" style="min-width: 18rem;">
+              <img
+                src="https://m.media-amazon.com/images/I/313wAT6Iy2L._SY160_.jpg"
+                class="card-img-top" alt="..." height="240px">
+              <div class="card-body">
+                <h5 class="card-title">Computer and Accessories</h5>
+              </div>
+            </div>
+            <div class="card myPadding mb-3" style="min-width: 18rem;">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_kitchen_B0126LMDFK_01.23._SY116_CB619238939_.jpg"
+                class="card-img-top" alt="..." height="240px">
+              <div class="card-body">
+                <h5 class="card-title">Computer and Accessories</h5>
+              </div>
+            </div>
+            <div class="card myPadding mb-3" style="min-width: 18rem;">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v3._SY304_CB573698005_.jpg"
+                class="card-img-top" alt="..." height="240px">
+              <div class="card-body">
+                <h5 class="card-title">Computer and Accessories</h5>
+              </div>
+            </div>
+            <div class="card myPadding mb-3" style="min-width: 18rem;">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_health-beauty_B07662GN57_01.23._SY116_CB619238939_.jpg"
+                class="card-img-top" alt="..." height="240px">
+              <div class="card-body">
+                <h5 class="card-title">Computer and Accessories</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

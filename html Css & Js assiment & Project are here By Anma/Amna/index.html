@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link rel="icon" href="Screenshot Capture - 2025-01-22 - 09-26-41.png">
+  <style>
+    .MyBtn {
+      padding: 7px;
+      border-top: 1px solid black !important;
+      border-right: 1px solid black !important;
+      border: none;
+      border-radius: 3px;
+      background-color: black;
+      color: white;
+    }
+
+    .MyBtn:hover {
+      transition: 1s;
+      padding: 7px;
+      border-top: 1px solid black !important;
+      border-right: 1px solid black !important;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+    }
+
+    ::selection {
+      background-color: blueviolet;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <h2><b>ℌ𝔢𝔵𝔅𝔩𝔲𝔯</b></h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i>Home</i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i>About</i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i>Contact</i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i>lip make up</i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://img.freepik.com/free-photo/top-view-assortment-cosmetic-products_23-2148619984.jpg?t=st=1737515268~exp=1737518868~hmac=5bac8dfdc2faa2358913b105cf8a51b99c1884c4698d851b3d95e53f465204d2&w=826"
+            class="d-block w-100" alt="..." height="600px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://img.freepik.com/free-vector/realistic-cosmetic-products-sale-advertisement_23-2148231284.jpg?t=st=1737515221~exp=1737518821~hmac=f8096bcdb2cc592e8c47bbc7cbcb2a6ce28ce88f260822fa4365874862e1f7e3&w=826"
+            class="d-block w-100" alt="..." height="600px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://img.freepik.com/premium-photo/cosmetic-container-mockups-trendy-background-branding-packaging-presentation-natural-skincare-beauty-product-concept-serum-essence-spray-beauty-set-with-green-leaves-hard-shadows_105596-5081.jpg?w=826"
+            class="d-block w-100" alt="..." height="600px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="container my-5">
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card" style="width: 18rem; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          <img
+            src="https://www.lorealparisusa.com/-/media/project/loreal/brand-sites/oap/americas/us/products/makeup/eye/mascara/paradise-big-deal-mascara-black-waterproof/071249690987_t1.pngg"
+            class="card-img-top" alt="Brush" style="height: 300px; object-fit: contain;">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <span style="font-size: 16px; color: gray; text-decoration: line-through;">Rs. 490</span>
+              <br>
+              <span style="font-size: 18px; font-weight: bold; color: #ff6f61;">$300</span>
+            </p>
+            <button class="MyBtn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card" style="width: 18rem; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          <img
+            src="https://www.lorealparisusa.com/-/media/project/loreal/brand-sites/oap/americas/us/products/makeup/eye/mascara/paradise-big-deal-mascara/blackest-black/071249690956_t1.png"
+            class="card-img-top" alt="Next Brush" style="height: 300px; object-fit: contain;">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <span style="font-size: 16px; color: gray; text-decoration: line-through;">Rs. 490</span>
+              <br>
+              <span style="font-size: 18px; font-weight: bold; color: #ff6f61;">$300</span>
+            </p>
+            <button class="MyBtn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card" style="width: 18rem; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          <img
+            src="https://www.lorealparisusa.com/-/media/project/loreal/brand-sites/oap/americas/us/products/makeup/face/foundation-makeup/lumi-le-glow-tint/cool-100/071249692493_t1.png"
+            class="" alt="Brush" style="height: 300px; object-fit: contain;">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <span style="font-size: 16px; color: gray; text-decoration: line-through;">Rs. 490</span>
+              <br>
+              <span style="font-size: 18px; font-weight: bold; color: #ff6f61;">$300</span>
+            </p>
+            <button class="MyBtn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Trending Products
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+              <div class="accordion-body">Check out our latest trending makeup products, handpicked for you!</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Choose Your Shade
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo">
+              <div class="accordion-body">Explore a wide range of shades to suit every skin tone.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                More From these
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree">
+              <div class="accordion-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, aliquid. Consectetur, saepe provident?</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Lip Makeup
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree">
+              <div class="accordion-body">Discover lipsticks, glosses, and balms for perfect pouty lips.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                Skincare Products
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour">
+              <div class="accordion-body">Give your skin the care it deserves with our premium skincare range.</div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      
+      <!-- Card 2 -->
+      <div class="col-md-5 col-lg-3">
+        <div class="card" style="width: 17rem; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          <img
+            src="https://www.lorealparisusa.com/-/media/project/loreal/brand-sites/oap/americas/us/products/makeup/lip-color/lip-gloss/plump-ambition-hyaluron-lip-oil/cristal-clear-101/071249690345_t1-v3.png"
+            class="card-img-top" alt="Next Brush" style="height: 300px; object-fit: contain;">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <span style="font-size: 16px; color: gray; text-decoration: line-through;">Rs. 490</span>
+              <br>
+              <span style="font-size: 18px; font-weight: bold; color: #ff6f61;">$300</span>
+            </p>
+            <button class="MyBtn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- ----card 5----- -->
+      <div class="col-md-5 col-lg-3">
+        <div class="card" style="width: 17rem; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          <img src="MyFavBrush.png" class="card-img-top" alt="Next Brush" style="height: 300px; object-fit: cover;">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <span style="font-size: 16px; color: gray; text-decoration: line-through;">Rs. 490</span>
+              <br>
+              <span style="font-size: 18px; font-weight: bold; color: #ff6f61;">$300</span>
+            </p>
+            <button class="MyBtn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 col-lg-3">
+        <div class="card" style="width: 17rem; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          <img src="4thBrush.png" class="card-img-top" alt="Next Brush" style="height: 300px; object-fit: contain;">
+          <div class="card-body text-center">
+            <p class="card-text">
+              <span style="font-size: 16px; color: gray; text-decoration: line-through;">Rs. 490</span>
+              <br>
+              <span style="font-size: 18px; font-weight: bold; color: #ff6f61;">$300</span>
+            </p>
+            <button class="MyBtn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <center right>  <div class="btn btn-outline-dark"><i class="#">Load More</i></div>
+  </center>
+ 
+</body>
+
+</html>

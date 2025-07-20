@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do Application</title>
+  <style>
+    body {
+      background-color: rgb(0, 0, 53);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 70%;
+      max-width: 430px;
+      margin: auto;
+    }
+
+    .box {
+      display: grid;
+      grid-template-columns: 1fr 80px 80px;
+      gap: 10px;
+      padding: 10px;
+      border: 1px solid white;
+    }
+
+    .container {
+      padding: 10px;
+      border: 1px solid white;
+    }
+
+    .input {
+      padding: 6px 10px;
+      border-radius: 5px;
+      outline: none;
+      box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, rgb(46, 46, 255), darkorchid) border-box;
+      border: 3px solid transparent;
+    }
+
+    .clear,
+    .add {
+      border: none;
+      padding: 8px;
+      background-color: white;
+      border-radius: 3px;
+      box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, rgb(46, 46, 255), darkorchid) border-box;
+      border: 3px solid transparent;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 0;
+    }
+
+    ul li {
+      list-style: none;
+      gap: 10px;
+      padding: 5px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, rgb(46, 46, 255), darkorchid) border-box;
+      border: 3px solid transparent;
+      font-weight: bold;
+    }
+
+    .btn {
+      background-color: white;
+      border: 1px solid red;
+    }
+
+    @media only screen and (max-width: 630px) {
+      .box {
+        display: grid;
+        grid-template-columns: 1fr 80px 80px;
+        gap: 10px;
+        padding: 10px;
+        border: none;
+      }
+
+      .container {
+        padding: 10px;
+        border: none;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .box {
+        grid-template-columns: 1fr;
+      }
+
+      .clear,
+      .add {
+        width: 100%;
+      }
+    }
+
+    .alignment {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .left-side {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .task-text {
+      color: black;
+    }
+
+    .btnfree {
+      background-color: white;
+      background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, rgb(46, 46, 255), darkorchid) border-box;
+      border: 3px solid transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <input type="text" class="input" id="Input" placeholder="Enter task" />
+      <button class="clear" id="Clear" onclick="clearAll()">Clear</button>
+      <button class="add" onclick="addToList()">Add</button>
+    </div>
+
+    <ul class="list" id="List">
+      <!-- li add here by JS -->
+    </ul>
+  </div>
+  <script>
+    let input = document.querySelector('#Input');
+    let clear = document.querySelector('#Clear');
+    let list = document.querySelector('#List');
+
+    function clearAll() {
+      list.innerHTML = "";
+    }
+
+    function addToList() {
+      let val = input.value.trim();
+      if (val === "") return;
+
+      list.innerHTML += `
+        <li class="alignment">
+          <div class="left-side">
+            <input type="checkbox">
+            <span class="task-text">${val}</span>
+          </div>
+          <button class="btnfree" onclick="deleteTask(this)">Remove</button>
+        </li>
+      `;
+      input.value = "";
+    }
+
+    function deleteTask(btn) {
+      btn.parentElement.remove();
+    }
+  </script>
+</body>
+
+</html>

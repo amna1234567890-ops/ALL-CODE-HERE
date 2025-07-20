@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .contact-info {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .section-title {
+            margin-top: 30px;
+            font-size: 1.3rem;
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .experience, .education {
+            margin-top: 15px;
+        }
+
+        .item-title {
+            font-weight: bold;
+        }
+
+        .item-time {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .skills span {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAMEBgcCAQj/xAA6EAACAQMCBAQEBAQFBQEAAAABAgMABBEFIQYSMUETIlFhMnGRoRQjgbEHQsHRFSQzovFDUmPh8Bb/xAAZAQADAQEBAAAAAAAAAAAAAAABAgMEAAX/xAAkEQACAgICAgICAwAAAAAAAAAAAQIRAyESMQRBEyIyQhQjM//aAAwDAQACEQMRAD8AFXmloyrIzYz6VKsbHkUcmSPerVxToK2uoSJDtG3nVR0APah9hDynlbAxtWdqhkyOkMakc3WpMaRMwXNc39iSxdaZt3CHDdaWhiReDwE5o0LCmoZjLjAA9jU9HjmTDYqrcVXp0z8m0bllcZJH8o/vXRVugvqwnf6nYacD+Nu0jI35c5P0FBv/ANppLNhFmf3AH7VnmpyO7EyHmc7nP9ah23KZV505hnffFX+NEebNa0/jfRpZltpHli5jgGWMgfWil1ZIWW5tSDnc471kE1ozAlMyRZ6nqtWDgziebT5Rp94xe2Y4Qk/AfT5ftSShq0NGe6Zdr2ITxc/Rlpuwn5SVYfOnZ7kFeZTsR6UKZbiRi0SEmo2VsmXpRJvEFNNeRhSTUKS1vn/1UbFMS2Lxkc5x8zTLoVyRKuNTRI25OmOtAFg1DULlpYl/LPSjkEEEi8pGcdaM2LRWsflwVPSkc6JvKuiqC2uYUIfNMMhhJZlJHfFXr8JHecztjpQ2+treImM4GP1rozTdA5sbsra3ktY35cZFe0rcKsQC9K9pyiaNR4nVXv1HU8qg0St+H7EWyq8KsxHxY3oNqshbUHkPQMPtVhh1BDApB3NaNErBFxw1CueUnl9KruocKNzlopSB7irs90T3ppn5xuaRxTDyZm0tlPDKIsnmziqhxNF4uoynOVTbB+WK13XIUitnmAHMoJU1k2rsGnZR05vMfU/8UYRoN2im3kAD4PUjOTUnh7SfxVwAy59fau7gCS4c9VXYf/fWj3D2LO3lu5p4oED452XJ/QU8nSFhG5Fhs+HUW3KBFJPUHvVC4t0N9Kuw6riGTcMOxrYdFL3duz85cqASSnKdxnpVQ4n0661Ga6P4F5ljQeFIznDE9Qo7Y9+tZ4tpmiUU0d8II+r6XHKzZdfK3vjvVtt9OSGLnI3x0rOOANTfTri7sXOD8QUjoRsftirnLr5SIjuRSuP2szt8RanfwW5ZX7VW77VIZ3VY+tN6xcm4Rz1LdarKq6TcwJG9OmQcnZcbPwmjBJAOd6gXs0izFY28udqj2N2occ2Dn1qVceGzL4eOag0mPVjtnd3cRIDbe5qNfJM8hkLkse2a7uXaJc/XFPfjIpbcbpkDc1ySTHtjtr4ogXy5ryplmv5C7E+4pVxVM0K+YF3z61LtJPyRUS5TIPzp60OIQtaEtmeTokM57Gu4pexprlzXSL+YK5oCYI4yuhb6acNuTgfrWUasxSzD/wA7Z+/T7Y+taXxwOeOOMbjmyV+2frWXcS3SvMlvGfKNiRSmj0B4ebbI671pXB2gQTaaJLyKOXsFdcge9Zmb2GC7hTooYZ9hW2cNlDpkRjIKlKSbHxJBCxEFmki8oVV3PKP2AqJKYDO4APn3+HoadL3scrJDAvhHcy83mz6cv9c0Imjuri6iMZeKNH5pSxB5xjp02Gd/0qM5UjVjhezPeLUj0/jNvw3lJVXcD3z/AGr1555mAVSaha9crqvHN08ZBjjdYcjvy9fvmrRoxt4rgiYAHHcU70efm3IEylkjCyqQSKGyx82Soq1cS3FuwRYypf2oCiZ6VxFxBgR1YdgKkxTFGAzTl1Ee1QYwwmHN61wFaLRpsa358Eg++Oppu+0hbGYcqnlY/wA29TOGgQ/ODVvt2tbpSJeViOuf6UFFvdl9NAuyhAt1wBXlGVtowPIFA7UqbiMGbgZXFewjEa1zOMLmukYKgFaIkJj4bakrefNMeKM4rsOBTMVMr3FMuY7iQndFAU+5rE9YZ0v336EEfSth4pkHLIuerAkfoKybWFV7sY6vzY/SpKjS/wAQI0bSSs/N5ubmBPer7wTxFeW0IiAE6JsyE+ZKp/4aQr4ka5UHG25HrkUraeeyu47u38kqff2PtXTjaBCXFm52nElvLHl4Zlb0IqrcXfxFs9OM9nYW8kt8BjmZQEjJ7k9z7Vxaa5bXmmC5RQkpBBX0b0rJbyRpdQuZJWLO0rEk/Oo405N8vRoySUY3EK8Okpdx8xyzybsf3q8CHI5u9UXTGCXqkdAQ4/StERQEV9yrHajMzT2gcbUSS8zgmn4bLnfGMA0WS18VOZB0plA1tM3ONqTaI2wXeWvhPyspoRcxcsowOp2qy6jOj9CM+poVEgluQTuBTHLZzp9+1jkOpZT6dqjyapPLqsLQs8as6rgHrvUvUY0UALUG0iU30A/8i/vRTKWa9ZQ/5ZM77d6VTrNALdR7V5TlD2bLDFcMvQd6clGDmuXbce1UVkp0ceEy75rwFvWu3mJGMUwZAvYk0162JS9FR4xmME4DH4kb61mt3+ZqeB/0lx0zvWhcaXCSFvEXDJ09zVT4U0ttU1yKMqWBkDSkegOfvSQVyNOT6xLlwnw0kWlia5iUzTEEqQdhjOD+mKf1XgjTL0HyJBIRsyNjf3/4q3yZVsKD5cKue+37VHmQoNzl26mvRjFVTMNu7Me1TR7/AIXu8yfnWEvSZPhJ9+4P2NUa7GLubHTxGIPrua+jJ4YbhGiuY0kRtjzbgjuKwviTTEsNYvrGMn/LSYjyckoQCAT3wD1rJlxqD0aYTco0QbNzlGU+dela1w2P8U0mELvIBgj0wKyTT05pG9RWw8BMIrBGxvgb+tZ5K2N+oetdJkgTlbpQnWrcxnOPlVrfUocYzQa+ja9fEYyKWUSTWirSWqOoJHbOc0zaWig5HrR+Xh643y2FNQzpdxC+AcgUoV0QLyzVkyM5FDrTTbn8bE6rlRIp+9WuOxlf4zRm2s4k5QF3zXJWzg9bIwgXttSqRAUEYFKq0UsinzNgUvB5nPoa9hH5wqUcDcUbEkNtp4aPOd6gyW7R84B3xtRPx2Ax2pp/zDkV12DoyjjJOS9WN9wQWJox/DfT1/B3E4yrEiMOvUZGc/7qe/iJpLf4aLyNMFBysfbr/epv8PvLoMCrszXJJAO5wRt9N6bB+ZTM7jZYn8KzYPIcnmCRqNyfl74+lQ7l2VmAwZX/ANg9KIShTEbqRWBGQgG/K3c4+e36CobxOvnVd+pMnrWz5FFXIzcHJ6IaoAVDnuMmsd/iQAnF874CmWCJ2A7NjFalq097ZGKdAkqeIiyLy78pOCR8s5rIeMpVvuIJ5UkaRVQIHPoKzzyRybRZQePsFw4iulbGA2Ca27hOxWLTocjqu3v6fasRhPO3I2zDbFatoerT8OWlg+qM0miXaL4V8V3tXI/05Mds5wfas/Y8l9dFnv7Qq2UzRDS41WMcyjPfNToTHLGH5kdWGVYHIYeoNRbphE3k+grkidNIlScrbKAKhy2yk5K5ry1laRztUm4YgUHI6wbJEB8KV3bxEjOTmpsXI3cGnlt+XBHSlT2cOQxOIx5qVT0j8g2FKroogTA458miEI5jntQ63XMmKKRR4Wp2BqzyRAMjFNIg3IqRKh5e9R1yFI3oWBoGcUxi50O7gI+JCB9KrnC6PbcPxvvzRXRJB9OUf2qzawjNpdxyA5ClunpQ/RLYT6VcqvfDgDufWr+P/oDI/wCug/bhTapIAOU5KD/tGf3zn7VBuT1qXY7aRbBuvKc/U0Pun3NTzOmy+JaAvEXMdHuxF8ZjwKzzTuH2vL24WeFh5SpXHQnoPt960XVJVSNFb+Y56elRLRCZY3ik5ZC2/OuR7Zp/GhcbZPyJVKjONa4VntLd7yJW/I3bb4l7Grr/AA7aK+0ObTrkxXNqQVlgfcrn+lFtZsnu9Iura3GHmhaNeYggsQcdO1R9K4UjtNOgaMva6lGoIniO6nG6t2ZexB+x3qeWO9AU/rsEB77+H94TLLNd8OzNgbZa0J6dO3b0O3frcrKVb2NZ4mDxSLzI4OzA1HQSzWs9tq9moLeVcDmjnTufb5GqJwvrg4d4ql4f8bxdMeUrEWz/AJdjuBnPTt9PelqwJNxs1CDliY7da4vJ8qfLiuPFHPnPz36UzeSBkIBGRU3P0TlZFFxKrll2FEI9UJZI8YJONqAy3RjOCOtT9CX8RMHYfWkVp6At9Fyi3QHOKVeoMKAPSvK2IuDbUDxaJrslB7ZiJMUViUlKg9sDZ0JMgg11HGjA+9cCPrmvI85ODgCuQvJnM0aBSvUEYNRNM08WRlVTmNsYHpkVJkDKDnen4QPDHckA/YVoxdgl0RJ0ENvHGOgQUFuT5qN6hs2PQUDuOpqGXbNmJaK/rFwv+IJFn4EBx7kn/wBV7C0RRhL0HKD5yu3rkftUttOtnneaWJXkbqzCuxZ24P8ApL9Kpj8iMIcRMmBylysaW7h/ERj8wvlYyc7YBydvXcVZLW4s0k5pS0gUbIu/MaDRRpHnkUD5CpCtvsP1qc819I5eNXbHZSbq5eaYYZjso7DsP0rwW0Kyc4hjLnvyjP1rhX5WzkH9a9ZyfU7bYGc0qkVUaPbdDMs0U0UcZ5vyWU/GuO/oc5puLT382SCBVO1jjKFJIxoct0L0XCo8csZCjsRytVs0XiGLV9M/FRIUPMVZT19j8jS8fbMmeK5aB99b4ueU49sUY0qMwlcdPlQ+MmW8MkgIHoaO2rJjGRtSxf2pko6YVjl8gpVHU7bGlWtMrZBswzMX+lHbU5TBG9QdKjDQZOKJK6Rqagk2xa2J0yM5xXMSKvxHOe1Q7jUFXIGM/OmrR57qfuFFUURqCFyoKnlHauFUxxQeuN6nJBtv96auY875wF9BVoKmCa0CtSOJG+VAp23NGtQxPzYJXpysO/rQK6hf+Tm5sHc0ssE5PRSHkY4rYyz4rgzIp8zDJ7CoL287nLyu6nsDg/QfOpdvZmNeVhyHphhg5ofw5dyYz8xdRRItG8edUKEKWAJJ9/SlxrwheXisdPeSS35d4A+4P9acgAjPmztgj5Ve1dTv2O9CWGMehY5pS2YtoPCN3py86w3Uck0nmKIylVG+Nu/SuI4dS068uL671K6DFGY2XiA8xGcBeYeU4xse4O/atwyh333qFdWtpIxaWGJ2PUsgJqfx1sr8h8xz3LtPcXly5a8uiWdmO8Kk75OAOYjb2+ZrRP4WaLPLbTaxcCRIZgIbZD0ZB/N8s7D9a0m7sNPuLcwXFrDJCceR4w1PoYwqoqhVUYAUYAFOiPHYHk09QxPf5Uz+HaFsqdu9HnRPWmZYEcZoUjuKGIN4xSr0gLtzD60qY6huzdli5QdqbuZnCtg9KVKhEVDOnKJ3zLvvVmsoURcqtKlTIZkyoU4zGX3zgj717Sp49izBF3s7AdAR+1C7jc/pSpVugYZERY151BG1MhfDvCRuApUKenUV5Soz6DEdBJtYmJ+IfTarnbEm2iJ6mNf2FKlWKZqxnbMfWoc7tvvSpVJlkRSxJ614WI3BpUqmMcTTOFGDTkcjNbkk70qVMuwMDy3kwkIyPpSpUqSxz//Z" alt="Profile Picture">
+            <h1>Karla (Amna)</h1>
+            <p class="contact-info">
+                📍 Karachi, Pakistan <br>
+                📧 karla@example.com | 📞 +92 123 456 7890 <br>
+                🌐 <a href="https://yourportfolio.com" target="_blank">yourportfolio.com</a>
+            </p>
+        </div>
+
+        <!-- Summary Section -->
+        <div>
+            <h2 class="section-title">Summary</h2>
+            <p>
+                Enthusiastic and detail-oriented Web Developer with a passion for creating interactive, user-friendly websites. 
+                Skilled in HTML, CSS, JavaScript, and responsive design. Always eager to learn and stay updated with modern technologies.
+            </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div>
+            <h2 class="section-title">Skills</h2>
+            <div class="skills">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+                <span>React</span>
+                <span>Git</span>
+                <span>Responsive Design</span>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div>
+            <h2 class="section-title">Experience</h2>
+            <div class="experience">
+                <h3 class="item-title">Web Developer Intern - XYZ Company</h3>
+                <p class="item-time">Jan 2024 - Present</p>
+                <p>Collaborated on building responsive websites using modern frameworks. Fixed bugs and optimized website performance to enhance user experience.</p>
+            </div>
+            <div class="experience">
+                <h3 class="item-title">Freelance Web Developer</h3>
+                <p class="item-time">Aug 2023 - Dec 2023</p>
+                <p>Developed landing pages and portfolio websites for small businesses. Gained hands-on experience in web design and deployment.</p>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div>
+            <h2 class="section-title">Education</h2>
+            <div class="education">
+                <h3 class="item-title">Bachelor of Computer Science</h3>
+                <p class="item-time">Karachi University | Sep 2020 - Jun 2024</p>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div>
+            <h2 class="section-title">Projects</h2>
+            <div>
+                <h3 class="item-title">Portfolio Website</h3>
+                <p><a href="https://yourportfolio.com" target="_blank">yourportfolio.com</a></p>
+                <p>Designed and developed a personal portfolio website to showcase projects and skills.</p>
+            </div>
+            <div>
+                <h3 class="item-title">E-commerce Website</h3>
+                <p><a href="https://ecommerceproject.com" target="_blank">ecommerceproject.com</a></p>
+                <p>Created a fully responsive e-commerce website with a functional cart and checkout system.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Karla. All Rights Reserved.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --main-bg-color: rgb(0, 153, 255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--main-bg-color);
+    font-family: "Oswald", sans-serif;
+
+}
+
+nav {
+    display: flex;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 159px;
+    padding: 9px;
+    height: 60px;
+    ;
+}
+
+nav ul {
+    height: 58px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 24px;
+}
+
+nav ul li a {
+    color: rgb(255, 95, 95);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    /* hover to ho raha ha magar asa to code to nahi hota 🤣🤣🤣🤣 */
+    color: rgb(21, 255, 0);
+    font-style: italic;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+
+}
+
+.search input {
+    height: 28px;
+    width: 30vw;
+    border-radius: 3px;
+    margin: 0px 16px 0px 56px;
+    padding: 0px 12px;
+
+}
+main{
+    margin: 1px;
+    padding: 1px;
+}
+
+.search button {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+
+}
+
+.slider {
+    width: 80vw;
+    margin: 12px auto;
+    overflow: hidden;
+}
+
+
+.card{
+    max-width: 91vw;
+    margin: 37px auto;
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    align-items: center;
+}
+    
+.card-item{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 15px;
+    font-family:"Oswald", sans-serif;
+}
+
+.card h2{
+    font-family: "Oswald", sans-serif;
+}
+
+.container {
+    min-height: calc(100vh - 58px - 12vh);
+}
+
+footer {
+    height: 12vh;
+    background-color: var(--main-bg-color);
+    color: white;
+    font-family: "Oswald", sans-serif;
+}
+

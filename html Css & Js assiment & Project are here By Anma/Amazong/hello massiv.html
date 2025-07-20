@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjust Card Height and Gap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <style>
+
+.hellomy {
+            border-radius: 8px;
+            height: 300px; /* Default height */
+            margin: 0 10px; /* Set consistent horizontal gap */
+        }
+
+        .hellomy:hover {
+            box-shadow: 2px 2px 10px black;
+        }
+
+        .width-controller {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .txt-captino {
+            text-align: center;
+        }
+
+        .scroll-container{
+            
+            overflow-x: auto; /* Enable horizontal scrolling */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+     
+        @media only screen and (max-width: 1000px) {
+            /* For tablets and smaller devices */
+            .scroll-container {
+                overflow-x: auto;
+}
+        }
+ 
+        @media (max-width: 576px) {
+            .hellomy {
+                height: 200px; /* Reduced height for small screens */
+                margin-left: -20px; /* Smaller gap */
+            }
+
+            .col-sm-2 {
+                flex: 0 0 auto; /* Prevent columns from expanding to full width */
+            }
+        }
+
+
+
+
+
+        .cards-sm:hover {
+            box-shadow: 2px 2px 10px black;
+            border-radius: 20px;
+        }
+
+        .scroll-container {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .rr {
+            max-height: 100%;
+            max-width: 100%;
+            border-radius: 100%;
+        }
+
+        @media (max-width: 992px) {
+            /* Only enable horizontal scrolling for tablets and smaller devices */
+            .scroll-container {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+        }
+
+        @media only screen and(min-width: 993px) {
+            .scroll-container {
+                overflow-x: hidden; /* Prevent scrolling on large devices */
+            }
+            
+        .rr{
+            max-height: 0px;
+            max-width: 40px;
+            height: 30px ;
+            border-radius: 100%;
+        }
+        }
+ 
+        .cards-sm:hover {
+            box-shadow: 2px 2px 10px black;
+            border-radius: 20px;
+        }
+
+        .rr {
+            border-radius: 100%;
+        }
+
+        .card-container {
+            overflow-x: auto; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent wrapping */
+            padding-bottom: 10px; /* Space to show scrollbar */
+        }
+
+        @media only screen and (max-width:790px){
+            .mymy{
+                display: none;
+            }
+        }
+
+
+    </style>
+
+    
+   
+    <!-- ------------------------CIRCLES------------------------ -->
+    <h1>Shop our most popular categories</h1>
+    <div class="container mt-4 scroll-container">
+        <!-- Use only one row and avoid nesting -->
+        <div class="row flex-nowrap">
+            <div class="col-sm-3 col-lg-2 cards-sm">
+                <img src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg"
+                    alt="" class="img-fluid rr">
+            </div>
+            <div class="col-sm-3 col-lg-2 cards-sm">
+                <img src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg"
+                    alt="" class="img-fluid rr">
+            </div>
+            <div class="col-sm-3 col-lg-2 cards-sm">
+                <img src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg"
+                    alt="" class="img-fluid rr">
+            </div>
+            <div class="col-sm-3 col-lg-2 cards-sm">
+                <img
+src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg"
+                    alt="" class="img-fluid rr">
+            </div>
+            <div class="col-sm-3 col-lg-2 cards-sm">
+                <img src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg"
+                    alt="" class="img-fluid rr">
+            </div>
+            <div class="col-sm-3 col-lg-2 cards-sm">
+                <img src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg"
+                    alt="" class="img-fluid rr">
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------CIRCLES------------------------ -->
+    <div class="mymy">
+    <div class="container mt-3 overflow-auto" style="white-space: nowrap;">
+        <div class="d-inline-flex">
+          <div class="card myPadding mb-3" style="min-width: 18rem;">
+            <img src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg" alt="" class="img-fluid  rr">
+            <div class="card-body">
+              <h5 class="card-title">Computer and Accessories</h5>
+            </div>
+          </div>
+          <div class="card myPadding mb-3" style="min-width: 18rem;">
+            <img src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg" alt="" class="img-fluid rr">
+            <div class="card-body">
+              <h5 class="card-title">Computer and Accessories</h5>
+            </div>
+          </div>
+          <div class="card myPadding mb-3" style="min-width: 18rem;">
+            <img src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg" alt="" class="img-fluid rr">
+            <div class="card-body">
+              <h5 class="card-title">Computer and Accessories</h5>
+            </div>
+          </div>
+          <div class="card myPadding mb-3" style="min-width: 18rem;">
+            <img src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg" alt="" class="img-fluid rr">
+
+            <div class="card-body">
+              <h5 class="card-title">Computer and Accessories</h5>
+            </div>
+          </div>
+          <div class="card myPadding mb-3" style="min-width: 18rem;">
+            <img src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg" alt="" class="img-fluid rr">
+
+            <div class="card-body">
+              <h5 class="card-title">Computer and Accessories</h5>
+            </div>
+          </div>
+          <div class="card myPadding mb-3" style="min-width: 18rem;">
+            <img src="https://i.etsystatic.com/6891987/c/2752/2187/211/505/il/7ec61a/1969078101/il_300x300.1969078101_o8g0.jpg" alt="" class="img-fluid rr">
+            <div class="card-body">
+              <h5 class="card-title">Computer and Accessories</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+</body>
+
+</html>

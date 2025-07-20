@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>   <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            border: none;
+        }
+
+        .sidebar {
+            background-color: #925fe2;
+            min-height: 100vh;
+            color: white;
+            padding-top: 20px;
+            border-radius: 30px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .sidebar a:hover {
+            background-color: #451e8a;
+        }
+
+        .card-custom {
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-section {
+            background-color: #925fe2;
+            color: white;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 400px;
+            height: 130px;
+        }
+
+        .br {
+            border-radius: 40px;
+        }
+
+        .decor-txt {
+            font-style: italic;
+            font-weight: 400;
+            color: purple;
+            font-size: larger;
+            text-shadow: 4px 4px 10px rgb(0, 26, 255);
+        }
+
+        .new-viwe {
+            display: none;
+        }
+
+        .cardmy {
+            background-color: rgb(218, 162, 171);
+            box-shadow: 1px 1px 20px purple;    
+               
+    }
+
+    .card-custom {
+        background-color: #f9f9f9;
+    }
+
+    h4 {
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: #8b3ce6;
+        border-color: #8b3ce6;
+    }
+
+    .btn-primary:hover {
+        background-color: #6d2bbd;
+        border-color: #6d2bbd;
+    }
+
+    .course-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+
+
+
+
+        @media only screen and (max-width: 934px) {
+
+            .new-viwe {
+                display: block;
+            }
+
+            /* Hide sidebar on small screens */
+            .sidebar {
+                display: none;
+            }
+
+            /* Hide profile image on small screens */
+            .profile-img {
+                display: none;
+            }
+
+            /* Offcanvas menu adjustments */
+            .offcanvas {
+                background-color: #cc5fe2;
+                color: white;
+                border-radius: 30px;
+            }
+
+            /* Make the offcanvas menu links bigger */
+            .offcanvas a {
+                font-size: 1.2rem;
+                padding: 15px;
+                color: white;
+            }
+
+            .hamburger-icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+
+        .cardmy {
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            border: 4px solid pink;
+            height: 160px;
+            margin-top: -189px;
+        }
+
+        .cardmy h5 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .cardmy img {
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            background-color: #8b3ce6;
+            border-color: #8b3ce6;
+        }
+
+        .btn-primary:hover {
+            background-color: #6d2bbd;
+            border-color: #6d2bbd;
+        }
+
+        .hamburger-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Offcanvas Sidebar Links */
+.humburgertxt {
+    font-size: 1rem;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+.humburgertxt:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Offcanvas Styling */
+.offcanvas {
+    background-color: #925fe2;
+    color: white;
+    border-radius: 15px;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+        @media (max-width: 768px) {
+            .cardmy {
+                flex-direction: column !important;
+                text-align: center;
+
+            }
+
+            .cardmy img {
+                display: none;
+            }
+        } 
+        
+        
+        @media (max-width: 782px) {
+            .card{
+                display: ;
+            }
+        }
+
+
+        @media (max-width: 576px) {
+            .cardmy {
+                padding: 10px;
+            }
+
+            .cardmy h5 {
+                font-size: 16px;
+            }
+
+            .btn-primary {
+                font-size: 14px;
+            }
+        }
+
+         @media only screen and (max-width:748px) {
+    .sidebar {
+        display: none; 
+    }
+
+    .profile-img {
+        display: none; 
+    }
+
+    .new-viwe {
+        display: block; 
+    }
+
+    .welcome-section {
+        flex-direction: row;
+        text-align: center; 
+    }
+
+    .course-card {
+        height: auto; 
+        padding: 10px; 
+    }
+
+    .course-card h5 {
+        font-size: 1rem; 
+    }
+.nn{
+    display: none;
+}
+
+    
+        } 
+        @media only screen and (max-width:814px){
+            .cardmy{
+                margin-top: -190px;
+            }               
+        }
+        @media (max-width: 320px) {
+            .cardmy {
+                margin-top: 20px;         
+            }
+
+            .cardmy img {
+                display: none;
+            }
+        }  
+
+        @media only screen and (max-width:767px) {
+            .cardmy {
+                margin-top: 20px;         
+            }
+
+            .cardmy img {
+                display: none;
+            }  
+
+        
+        }
+
+            .humburgertxt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+}
+.icon {
+    font-size: 1.2em;
+}
+
+
+
+ 
+        
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid bg-light py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+        <!-- Notification Icon -->
+        <div></div>
+
+    
+        <!-- Centered Search Input -->
+        <div class="w-50">
+            <input type="text" class="nn form-control form-control-lg mx-auto" placeholder="Search here...">
+        </div>
+
+        <img src="FSDFSDFSDF.png" alt="" height="50px">
+
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1827/1827392.png" alt="Notifications" width="30" class="me-2">
+        </div>
+    
+        <!-- Placeholder for Alignment -->
+    </div>
+      <div class="row">
+            <!-- Sidebar -->
+            <div class="col col-md-2 sidebar">
+                <h4 class="text-center">
+                    <img src="Screenshot Capture - 2025-01-03 - 13-08-31.png" alt="" width="auto" height="100px"
+                        class="br">
+                </h4>
+                    <a href="#" class="humburgertxt"><ion-icon name="home-outline"></ion-icon> Dashboard</a>
+                    <a href="#" class="humburgertxt"><ion-icon name="card-outline"></ion-icon> Payment Info</a>
+                    <a href="#" class="humburgertxt"><ion-icon name="create-outline"></ion-icon> Registration</a>
+                    <a href="#" class="humburgertxt"><ion-icon name="book-outline"></ion-icon> Courses</a>
+                    <a href="#" class="humburgertxt"><ion-icon name="warning-outline"></ion-icon> Drop Semester</a>
+                    <a href="#" class="humburgertxt"><ion-icon name="stats-chart-outline"></ion-icon> Result</a>
+                    <a href="#" class="humburgertxt"><ion-icon name="notifications-outline"></ion-icon> Notice</a>
+                    <a href="#" class="humburgertxt"><ion-icon name="calendar-outline"></ion-icon> Schedule</a>
+                    <a href="#" class="humburgertxt text-danger"><ion-icon name="log-out-outline"></ion-icon> Logout</a>
+                
+            </div>
+
+            <!-- Hamburger Menu (visible only on small screens) -->
+            <div class="container-fluid new-viwe">
+                <!-- Hamburger Menu -->
+                <div class="d-flex justify-content-start align-items-center">
+                    <a class="" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        <img src="https://storage.googleapis.com/proudcity/santaclaracountycacities/uploads/2021/07/333-3335189_menu-three-horizontal-lines-symbol-free-icon-logos-with-horizontal-lines.jpg"
+                            alt="Hamburger" class="hamburger-icon">
+                    </a>
+                </div>
+            
+                <!-- Offcanvas Sidebar -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <h4 class="text-center">
+                            <img src="Screenshot Capture - 2025-01-03 - 13-08-31.png" alt="Logo" width="auto" height="50px"
+                                class="rounded">
+                        </h4>
+                        <a href="#" class="humburgertxt"><ion-icon name="home-outline"></ion-icon> Dashboard</a>
+                        <a href="#" class="humburgertxt"><ion-icon name="card-outline"></ion-icon> Payment Info</a>
+                        <a href="#" class="humburgertxt"><ion-icon name="create-outline"></ion-icon> Registration</a>
+                        <a href="#" class="humburgertxt"><ion-icon name="book-outline"></ion-icon> Courses</a>
+                        <a href="#" class="humburgertxt"><ion-icon name="warning-outline"></ion-icon> Drop Semester</a>
+                        <a href="#" class="humburgertxt"><ion-icon name="stats-chart-outline"></ion-icon> Result</a>
+                        <a href="#" class="humburgertxt"><ion-icon name="notifications-outline"></ion-icon> Notice</a>
+                        <a href="#" class="humburgertxt"><ion-icon name="calendar-outline"></ion-icon> Schedule</a>
+                        <a href="#" class="humburgertxt text-danger"><ion-icon name="log-out-outline"></ion-icon> Logout</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="col-md-10 p-4">
+                <!-- Welcome Section -->
+                <div class="welcome-section mb-4">
+                    <div>
+                        <p class="mb-0">September 4, 2023</p>
+                        <h2>Welcome back, <samp class="decor-txt">Amna</samp></h2>
+                        <p>Always stay updated in your student portal</p>
+                    </div>
+                    <img src="Screenshot_Capture_-_2025-01-03_-_12-53-41-removebg-preview.png" alt="User"
+                        class="profile-img d-none d-md-block"> <!-- Hide on small screens -->
+                </div>
+
+                <!-- Finance and Course Instructors Section -->
+             <!-- Enrolled Courses Section -->
+<div class="container-">
+    <div class="row">
+        <!-- Finance Section -->
+        <div class="col-md-8 col-sm-6 top">
+            <h4>Finance</h4>
+            <div class="row g-3">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card text-center p-3">
+                        <p>Total Payable</p>
+                        <img src="low or up.png" alt="Payable" height="120px">
+                        <h5>$10,000</h5>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card card-custom text-center p-3" style="border: 5px solid plum;">
+                        <p>Total Paid</p>
+                        <img src="coin.png" alt="Paid" height="120px">
+                        <h5>$5,000</h5>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card text-center p-3">
+                        <p>Others</p>
+                        <img src="this is corect low or up.png" alt="Others" height="120px">
+                        <h5>$300</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Instructors Section -->
+        <div class="col-md-4 col-sm-6">
+            <div class="card" style="width: 100%;">
+                <h5 class="card-title text-center">Course Instructors</h5>
+                <img src="3proefilpic.png" class="card-img-top" alt="Instructor Image">
+                <div class="card-body">
+                    <h5 class="card-title">Daily Notice</h5>
+                    <span style="cursor: pointer; color: #8b3ce6; font-weight: bold;">See all</span>
+
+                    <h6 class="mt-3">Lorem, ipsum dolor.</h6>
+                    <p class="card-text">Some quick example text to illustrate the point of this notice.</p>
+                    <span style="cursor: pointer; color: #8b3ce6; font-weight: bold;">See more</span>
+
+                    <h6 class="mt-3">Lorem, ipsum dolor.</h6>
+                    <p class="card-text">Some quick example text to build on the notice and make it more
+                        informative.</p>
+                    <span style="cursor: pointer; color: #8b3ce6; font-weight: bold;">See more</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row g-3">
+            <!-- First Card -->
+            <div class="col-sm-6 col-md-4">
+                <div class="cardmy d-flex flex-row justify-content-between align-items-center p-3">
+                    <!-- Text Section -->
+                    <div class="text-left">
+                        <h5>Programming</h5>
+                        <button class="btn btn-primary mt-3">View</button>
+                    </div>
+                    <!-- Image Section -->
+                    <div>
+                        <img src="Screenshot_Capture_-_2025-01-05_-_17-07-55-removebg-preview (1).png" alt="Course Icon"
+                            class="img-fluid" width="150">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Card -->
+            <div class="col-sm-6 col-md-4">
+                <div class="cardmy d-flex flex-row justify-content-between align-items-center p-3">
+                    <!-- Text Section -->
+                    <div class="text-left">
+                        <h5>Web Development</h5>
+                        <button class="btn btn-primary mt-3">View</button>
+                    </div>
+                    <!-- Image Section -->
+                    <div>
+                        <img src="download-removebg-preview (1).png" alt="Course Icon" class="img-fluid" width="150">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div> <!-- End Main Content -->
+        </div> <!-- End Row -->
+    </div> <!-- End Container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
